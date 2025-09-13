@@ -2,4 +2,4 @@ REPOSITÓRIO E PÁGINA DO PROJETO CRIMSON CASTLE
 
 Repositório GitHub: https://github.com/ArthurFuller/crimson-castle-landing-page
 
-Página GitHub Pages: https://arthurfuller.github.io/crimson-castle-landing-page
+Página GitHub: https://arthurfuller.github.io/Crimson-castle-landing-page
