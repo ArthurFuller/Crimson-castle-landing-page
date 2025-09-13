@@ -5,108 +5,188 @@
     --dark: #2C1810;
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    padding-top: 76px;
+* { 
+    scroll-padding-top: 90px;
 }
 
-.navbar-brand {
-    font-weight: bold;
-    color: var(--gold) !important;
+html { 
+    scroll-padding-top: 90px;
 }
 
-.nav-link:hover {
-    color: var(--gold) !important;
+body { 
+    font-family: Arial, sans-serif; 
+    padding-top: 90px;
 }
 
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(44,24,16,0.7), rgba(44,24,16,0.7)), url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+.navbar { 
+    background: rgba(44, 24, 16, 0.95) !important; 
+    padding: 1rem 0;
+    min-height: 80px;
+}
+.navbar-brand { color: var(--gold) !important; font-weight: bold; }
+.nav-link { color: white !important; transition: all 0.3s ease; }
+.nav-link:hover { color: var(--gold) !important; transform: translateY(-2px); }
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: var(--gold);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    background: var(--gold);
     border: none;
-    font-weight: 600;
+    color: var(--dark);
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(45deg, var(--secondary), var(--primary));
-    transform: translateY(-2px);
+    background: #E6C200;
+    color: var(--dark);
+    transform: translateY(-3px);
 }
 
-h2 {
-    color: var(--primary);
+h2 { color: var(--primary); font-weight: bold; }
+h3 { color: var(--primary); }
+
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover { transform: translateY(-10px); }
+
+/* Imagens dos Personagens */
+.card-img-top, .card-img-placeholder {
+    height: 250px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+}
+
+.card-img-placeholder {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
     font-weight: bold;
-    margin-bottom: 2rem;
 }
 
-.bg-dark h2 {
+.card-img-placeholder::before { content: 'IMAGEM DO PERSONAGEM'; }
+
+/* Imagem do Cenário */
+.scenario-placeholder, .scenario-placeholder img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.scenario-placeholder {
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-weight: bold;
+}
+
+.scenario-placeholder::before { content: 'IMAGEM DO CENÁRIO'; }
+
+/* Imagens do Carrossel */
+.carousel-item img {
+    height: 400px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+}
+
+.carousel-inner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.carousel-caption h4 {
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
     color: var(--gold);
 }
 
-.character-img, .team-img {
-    width: 150px;
-    height: 150px;
+/* Fotos da Equipe */
+.team-avatar {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--gold);
+    margin: 0 auto 1rem;
     background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
 }
 
-.carousel img {
-    height: 400px;
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     object-fit: cover;
-    background: linear-gradient(45deg, var(--dark), var(--primary));
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+.team-avatar::before { 
+    content: 'FOTO'; 
+    display: none;
+}
+
+.team-avatar:has(img)::before {
+    display: none;
+}
+
+.social-links a {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover { color: var(--gold); }
 
 footer {
     background: var(--dark) !important;
+    color: white;
 }
 
-footer h4 {
+.footer-brand {
     color: var(--gold);
+    font-weight: bold;
+    font-size: 1.8rem;
 }
 
-footer a {
+.social-footer a {
+    color: white;
     font-size: 1.5rem;
-    transition: color 0.3s;
+    transition: all 0.3s ease;
 }
 
-footer a:hover {
-    color: var(--gold) !important;
-}
+.social-footer a:hover { color: var(--gold); }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .character-img, .team-img {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .carousel img {
-        height: 250px;
-    }
-}
-
-img[src*="images/"] {
-    background: #ddd;
-    background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), 
-                      linear-gradient(-45deg, #ccc 25%, transparent 25%);
-    background-size: 20px 20px;
+    body { padding-top: 60px; }
+    .hero-section h1 { font-size: 2.5rem; }
 }

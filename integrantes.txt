@@ -1,10 +1,10 @@
 INTEGRANTES DO PROJETO CRIMSON CASTLE
 
-Nome: João Silva
-RM: 12345
+Nome: Arthur Lemes Fuller
+RM: 562646  
 
-Nome: Maria Santos
-RM: 67890
+Nome: Pedro Mendes Delphino
+RM: 561643
 
-Nome: Pedro Costa
-RM: 54321
+Nome: Thiago Yuta Katu Rakib
+RM: 565023
